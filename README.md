@@ -63,7 +63,9 @@ venddy-store-labs/
     ├── ARCHIFY-NOTICES.md
     └── historial/
         ├── arquitectura-inicial-v1.html
-        └── diagrama-arquitectura-v1.png
+        ├── diagrama-arquitectura-v1.png
+        ├── arquitectura-inicial-v2.html
+        └── diagrama-arquitectura-v2.png
 ```
 
 ## Documentos del laboratorio
@@ -82,7 +84,7 @@ venddy-store-labs/
 
 El [HTML de las cinco vistas](arquitectura/arquitectura-inicial.html) incorpora la figura lógica final. Mantiene las exportaciones en PNG, SVG y PDF; la exportación de lanzamiento incluye las dos vistas objetivo y la completa incluye las cinco. El [SVG editable](arquitectura/diagrama-arquitectura.svg), el PNG del README y el PDF muestran el mismo diagrama.
 
-La versión anterior se conserva íntegramente en el [HTML del historial](arquitectura/historial/arquitectura-inicial-v1.html) y su [imagen original](arquitectura/historial/diagrama-arquitectura-v1.png).
+Las versiones anteriores se conservan íntegramente en el historial: [primera versión](arquitectura/historial/arquitectura-inicial-v1.html) y su [imagen](arquitectura/historial/diagrama-arquitectura-v1.png); [segunda versión](arquitectura/historial/arquitectura-inicial-v2.html) y su [imagen](arquitectura/historial/diagrama-arquitectura-v2.png).
 
 El [diagrama complementario Archify](arquitectura/arquitectura-archify.html) está generado con **Archify 3.0.1**, el mismo motor utilizado por la referencia del laboratorio. Permite explorar componentes y relaciones, cambiar el tema, presentar y exportar como imagen o SVG. Funciona sin instalación ni conexión a servicios externos.
 
@@ -104,4 +106,4 @@ Los cambios se registran por entregable mediante Conventional Commits: `chore` p
 
 ## Créditos de los diagramas
 
-El diagrama complementario usa [Archify](https://github.com/tt-a1i/archify), con su [licencia MIT](arquitectura/ARCHIFY-LICENSE.txt), [avisos de terceros](arquitectura/ARCHIFY-NOTICES.md) y los avisos de fuentes conservados en el HTML. El diagrama principal y las cinco vistas emplean iconos Lucide y Simple Icons; sus avisos ISC, MIT y CC0 permanecen en ese archivo. Los logotipos identifican a los proveedores correspondientes.
+El diagrama complementario usa [Archify](https://github.com/tt-a1i/archify), con su [licencia MIT](arquitectura/ARCHIFY-LICENSE.txt), [avisos de terceros](arquitectura/ARCHIFY-NOTICES.md) y los avisos de fuentes conservados en el HTML. La figura principal emplea símbolos vectoriales originales y logotipos de Simple Icons (CC0). Las otras vistas y el historial conservan sus iconos y avisos ISC, MIT y CC0 en los HTML correspondientes. Los logotipos identifican a los proveedores correspondientes.

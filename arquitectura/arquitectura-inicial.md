@@ -41,13 +41,13 @@ flowchart LR
     Eventos -->|Actualizaciones por empresa| Web
 ```
 
-La figura final desarrolla los componentes y sus interfaces. Los puertos de entrada identifican las operaciones y el acceso que ofrece la aplicación; los de salida distinguen persistencia y transacciones, archivos y eventos. Los contratos compartidos de API (DTOs y validación) se presentan separados de esos contratos internos. Las flechas continuas representan invocaciones o integración; las discontinuas muestran dependencias de código hacia los puertos. Los adaptadores se ejecutan dentro de la misma API.
+La figura final desarrolla los componentes y sus interfaces. Los puertos de entrada identifican las operaciones y el acceso que ofrece la aplicación; los de salida distinguen persistencia y transacciones, archivos y eventos. Los contratos compartidos de API (DTOs y validación) se presentan separados de esos contratos internos. Las flechas continuas representan comunicación; las discontinuas muestran dependencias de código del adaptador hacia su puerto. Los adaptadores se ejecutan dentro de la misma API.
 
 ![Arquitectura oficial de lanzamiento de Venddy Store](diagrama-arquitectura.png)
 
 [Abrir las cinco vistas](arquitectura-inicial.html) · [Descargar el diagrama en PDF](diagrama-arquitectura.pdf) · [Consultar el SVG editable](diagrama-arquitectura.svg) · [Explorar el complemento Archify](arquitectura-archify.html).
 
-El [HTML anterior](historial/arquitectura-inicial-v1.html) y su [imagen](historial/diagrama-arquitectura-v1.png) se conservan íntegramente en el historial.
+El historial conserva íntegramente la [primera versión](historial/arquitectura-inicial-v1.html) y su [imagen](historial/diagrama-arquitectura-v1.png), así como la [segunda versión](historial/arquitectura-inicial-v2.html) y su [imagen](historial/diagrama-arquitectura-v2.png).
 
 La vista complementaria Archify representa el flujo lógico de ejecución. Las dependencias de código siguen apuntando hacia los contratos y el dominio, aunque las llamadas de ejecución continúen hacia los adaptadores y recursos externos. Ambas figuras describen la misma propuesta de lanzamiento.
 
