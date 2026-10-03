@@ -12,3 +12,12 @@ Thumbs.db
 # Dependencias y resultados de herramientas
 node_modules/
 .cache/
+
+# Evidencia local de generación y revisión del diagrama
+.archify/
+arquitectura/*.delivery.json
+arquitectura/*.delivery-pending.json
+arquitectura/*.finalize.json
+arquitectura/*.finalize-summary.json
+arquitectura/*.browser-check.json
+arquitectura/archify-review*/

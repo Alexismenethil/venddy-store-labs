@@ -21,27 +21,33 @@ flowchart LR
         Casos["Casos de uso por módulo"]
         Dominio["Core: dinero, stock,<br/>permisos y estados"]
         Puertos["Puertos de salida<br/>repositorios, transacciones,<br/>archivos y eventos"]
+        Prisma["Adaptador Prisma"]
+        S3["Adaptador compatible con S3"]
+        Eventos["Adaptador Socket.IO<br/>eventos tras commit"]
         Entrada --> Casos
         Casos --> Dominio
         Casos --> Puertos
+        Puertos --> Prisma
+        Puertos --> S3
+        Puertos --> Eventos
     end
     subgraph Datos["3. Persistencia e integraciones"]
-        Prisma["Adaptador Prisma"] --> PG[("PostgreSQL / Neon<br/>RLS por empresa")]
-        S3["Adaptador compatible con S3"] --> R2["R2: objetos e imágenes"]
-        Eventos["Adaptador Socket.IO<br/>eventos tras commit"]
+        PG[("PostgreSQL / Neon<br/>RLS por empresa")]
+        R2["R2: objetos e imágenes"]
     end
     Web -->|REST y tiempo real| Entrada
-    Puertos --> Prisma
-    Puertos --> S3
-    Puertos --> Eventos
+    Prisma --> PG
+    S3 --> R2
     Eventos -->|Actualizaciones por empresa| Web
 ```
 
-La figura siguiente desarrolla los componentes y sus interfaces. Las flechas continuas representan invocaciones o integración; las discontinuas muestran dependencias de código hacia los contratos internos.
+La figura original se conserva y desarrolla los componentes y sus interfaces. Las flechas continuas representan invocaciones o integración; las discontinuas muestran dependencias de código hacia los contratos internos. Los puertos son contratos internos y sus adaptadores se ejecutan dentro de la misma API.
 
 ![Arquitectura oficial de lanzamiento de Venddy Store](diagrama-arquitectura.png)
 
-[Abrir las cinco vistas de arquitectura y despliegue](arquitectura-inicial.html).
+[Abrir el HTML original y sus cinco vistas](arquitectura-inicial.html) · [Explorar el diagrama complementario Archify](arquitectura-archify.html) · [Consultar su especificación JSON](arquitectura-archify.architecture.json).
+
+La vista complementaria Archify representa el flujo lógico de ejecución. Las dependencias de código siguen apuntando hacia los contratos y el dominio, aunque las llamadas de ejecución continúen hacia los adaptadores y recursos externos. Ambas figuras describen la misma propuesta de lanzamiento.
 
 ## 3. Monolito modular y puertos y adaptadores
 
@@ -74,7 +80,7 @@ Estas vistas describen el estado verificado el **2 de octubre de 2026**; no impl
 | Datos e imágenes | PostgreSQL en Neon, AWS us-east-1, con plan actual no verificado; Cloudinary Free para fotografías y CDN. |
 | Servicio legado | `facipos-api.onrender.com`, también en Render, comparte Neon y Cloudinary y queda fuera del flujo del frontend. No es una réplica coordinada ni un microservicio del sistema. |
 
-El HTML ofrece las pestañas **Arquitectura actual**, **Desarrollo local** y **Nube actual** para revisar estas tres perspectivas. R2 y Redis no están configurados en las API de la nube verificadas.
+El [HTML original](arquitectura-inicial.html) ofrece las pestañas **Arquitectura actual**, **Desarrollo local** y **Nube actual** para revisar estas tres perspectivas. R2 y Redis no están configurados en las API de la nube verificadas.
 
 ## 5. Despliegue oficial de lanzamiento
 
