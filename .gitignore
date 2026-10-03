@@ -1,0 +1,14 @@
+# Archivos del sistema y temporales de editores
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Configuración privada
+.env
+.env.*
+!.env.example
+
+# Dependencias y resultados de herramientas
+node_modules/
+.cache/
