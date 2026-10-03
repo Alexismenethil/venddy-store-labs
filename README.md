@@ -33,9 +33,9 @@ La arquitectura aprobada para el lanzamiento mantiene **tres capas**, un **monol
 | Despliegue objetivo | Workers y OpenNext, una API en Render Starter, Neon Launch, R2/CDN y respaldo privado. |
 | Recuperación | Copia diaria, PITR y restauración en una base separada bajo demanda. |
 
-[Leer la propuesta completa](arquitectura/arquitectura-inicial.md) · [Abrir el HTML original y sus cinco vistas](arquitectura/arquitectura-inicial.html) · [Explorar el diagrama complementario con Archify](arquitectura/arquitectura-archify.html)
+[Leer la propuesta completa](arquitectura/arquitectura-inicial.md) · [Abrir las cinco vistas](arquitectura/arquitectura-inicial.html) · [Descargar el diagrama en PDF](arquitectura/diagrama-arquitectura.pdf) · [Explorar el complemento Archify](arquitectura/arquitectura-archify.html)
 
-La arquitectura y el despliegue oficiales son **objetivos pendientes de implementación y aceptación**. La nube actual, verificada el 2 de octubre de 2026, utiliza Vercel, Render Free, Neon y Cloudinary. El HTML original conserva la arquitectura actual, el desarrollo local, la nube actual y las dos vistas oficiales de lanzamiento. Archify ofrece una exploración complementaria de la misma arquitectura objetivo.
+La arquitectura y el despliegue oficiales son **objetivos pendientes de implementación y aceptación**. La nube actual, verificada el 2 de octubre de 2026, utiliza Vercel, Render Free, Neon y Cloudinary. El HTML conserva la arquitectura actual, el desarrollo local, la nube actual y las dos vistas oficiales de lanzamiento. La figura lógica final identifica los puertos y distingue sus contratos internos de los contratos compartidos de API. Archify ofrece una exploración complementaria de la misma arquitectura objetivo.
 
 ## Estructura del repositorio
 
@@ -54,11 +54,16 @@ venddy-store-labs/
     ├── arquitectura-inicial.md
     ├── arquitectura-inicial.html
     ├── diagrama-arquitectura.png
+    ├── diagrama-arquitectura.svg
+    ├── diagrama-arquitectura.pdf
     ├── arquitectura-archify.architecture.json
     ├── arquitectura-archify.html
     ├── diagrama-archify.png
     ├── ARCHIFY-LICENSE.txt
-    └── ARCHIFY-NOTICES.md
+    ├── ARCHIFY-NOTICES.md
+    └── historial/
+        ├── arquitectura-inicial-v1.html
+        └── diagrama-arquitectura-v1.png
 ```
 
 ## Documentos del laboratorio
@@ -75,7 +80,9 @@ venddy-store-labs/
 
 ## Consulta del diagrama
 
-El [HTML original](arquitectura/arquitectura-inicial.html) y la imagen principal del README se conservan. Sus cinco vistas mantienen su presentación y sus exportaciones en PNG, SVG y PDF. La exportación de lanzamiento incluye las dos vistas objetivo; la completa incluye las cinco.
+El [HTML de las cinco vistas](arquitectura/arquitectura-inicial.html) incorpora la figura lógica final. Mantiene las exportaciones en PNG, SVG y PDF; la exportación de lanzamiento incluye las dos vistas objetivo y la completa incluye las cinco. El [SVG editable](arquitectura/diagrama-arquitectura.svg), el PNG del README y el PDF muestran el mismo diagrama.
+
+La versión anterior se conserva íntegramente en el [HTML del historial](arquitectura/historial/arquitectura-inicial-v1.html) y su [imagen original](arquitectura/historial/diagrama-arquitectura-v1.png).
 
 El [diagrama complementario Archify](arquitectura/arquitectura-archify.html) está generado con **Archify 3.0.1**, el mismo motor utilizado por la referencia del laboratorio. Permite explorar componentes y relaciones, cambiar el tema, presentar y exportar como imagen o SVG. Funciona sin instalación ni conexión a servicios externos.
 
@@ -97,4 +104,4 @@ Los cambios se registran por entregable mediante Conventional Commits: `chore` p
 
 ## Créditos de los diagramas
 
-El diagrama complementario usa [Archify](https://github.com/tt-a1i/archify), con su [licencia MIT](arquitectura/ARCHIFY-LICENSE.txt), [avisos de terceros](arquitectura/ARCHIFY-NOTICES.md) y los avisos de fuentes conservados en el HTML. El diagrama principal y las cinco vistas originales emplean iconos Lucide y Simple Icons; sus avisos ISC, MIT y CC0 permanecen en ese archivo. Los logotipos identifican a los proveedores correspondientes.
+El diagrama complementario usa [Archify](https://github.com/tt-a1i/archify), con su [licencia MIT](arquitectura/ARCHIFY-LICENSE.txt), [avisos de terceros](arquitectura/ARCHIFY-NOTICES.md) y los avisos de fuentes conservados en el HTML. El diagrama principal y las cinco vistas emplean iconos Lucide y Simple Icons; sus avisos ISC, MIT y CC0 permanecen en ese archivo. Los logotipos identifican a los proveedores correspondientes.

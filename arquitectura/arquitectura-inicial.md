@@ -41,11 +41,13 @@ flowchart LR
     Eventos -->|Actualizaciones por empresa| Web
 ```
 
-La figura original se conserva y desarrolla los componentes y sus interfaces. Las flechas continuas representan invocaciones o integración; las discontinuas muestran dependencias de código hacia los contratos internos. Los puertos son contratos internos y sus adaptadores se ejecutan dentro de la misma API.
+La figura final desarrolla los componentes y sus interfaces. Los puertos de entrada identifican las operaciones y el acceso que ofrece la aplicación; los de salida distinguen persistencia y transacciones, archivos y eventos. Los contratos compartidos de API (DTOs y validación) se presentan separados de esos contratos internos. Las flechas continuas representan invocaciones o integración; las discontinuas muestran dependencias de código hacia los puertos. Los adaptadores se ejecutan dentro de la misma API.
 
 ![Arquitectura oficial de lanzamiento de Venddy Store](diagrama-arquitectura.png)
 
-[Abrir el HTML original y sus cinco vistas](arquitectura-inicial.html) · [Explorar el diagrama complementario Archify](arquitectura-archify.html) · [Consultar su especificación JSON](arquitectura-archify.architecture.json).
+[Abrir las cinco vistas](arquitectura-inicial.html) · [Descargar el diagrama en PDF](diagrama-arquitectura.pdf) · [Consultar el SVG editable](diagrama-arquitectura.svg) · [Explorar el complemento Archify](arquitectura-archify.html).
+
+El [HTML anterior](historial/arquitectura-inicial-v1.html) y su [imagen](historial/diagrama-arquitectura-v1.png) se conservan íntegramente en el historial.
 
 La vista complementaria Archify representa el flujo lógico de ejecución. Las dependencias de código siguen apuntando hacia los contratos y el dominio, aunque las llamadas de ejecución continúen hacia los adaptadores y recursos externos. Ambas figuras describen la misma propuesta de lanzamiento.
 
@@ -80,7 +82,7 @@ Estas vistas describen el estado verificado el **2 de octubre de 2026**; no impl
 | Datos e imágenes | PostgreSQL en Neon, AWS us-east-1, con plan actual no verificado; Cloudinary Free para fotografías y CDN. |
 | Servicio legado | `facipos-api.onrender.com`, también en Render, comparte Neon y Cloudinary y queda fuera del flujo del frontend. No es una réplica coordinada ni un microservicio del sistema. |
 
-El [HTML original](arquitectura-inicial.html) ofrece las pestañas **Arquitectura actual**, **Desarrollo local** y **Nube actual** para revisar estas tres perspectivas. R2 y Redis no están configurados en las API de la nube verificadas.
+El [HTML de las cinco vistas](arquitectura-inicial.html) ofrece las pestañas **Arquitectura actual**, **Desarrollo local** y **Nube actual** para revisar estas tres perspectivas. R2 y Redis no están configurados en las API de la nube verificadas.
 
 ## 5. Despliegue oficial de lanzamiento
 
