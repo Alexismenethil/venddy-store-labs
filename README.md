@@ -7,7 +7,8 @@ Plataforma web multiempresa para negocios de comida: carta por QR, pedidos, prep
 | Campo | Detalle |
 | :--- | :--- |
 | Curso | Arquitectura de Software |
-| Docente | Richard Zapata Casaverde |
+| Docente de teoría | Ing. Richard Zapata Casaverde |
+| Docente de laboratorio | **LIZBETH JAICO QUISPE** |
 | Estudiante | Alexis Huamani Rivera |
 | Código | 27220106 |
 | Caso de estudio | Venddy Store |
