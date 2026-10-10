@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1480" viewBox="0 0 2200 1480" role="img" aria-labelledby="title desc">
+<title id="title">Clean Architecture aplicada a Venddy Store</title>
+<desc id="desc">Círculos con Dominio, Aplicación y adaptadores externos. Presentación usa los casos de uso; Aplicación depende de Dominio; Infraestructura implementa contratos. app.config.ts conecta los adaptadores. El comensal registra un pedido sin procesar pago. Caja registra un cobro interno en otra operación. Las flechas representan dependencias de código.</desc>
+<defs><marker id="arrow" markerWidth="13" markerHeight="13" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L12 6 L0 12 Z" fill="#344a63" /></marker></defs>
+<rect width="2200" height="1480" fill="white" />
+<g font-family="Arial, Helvetica, sans-serif" fill="#202833">
+<text x="50" y="53" font-size="30" font-weight="700" text-anchor="start" fill="#202833">CLEAN ARCHITECTURE · VENDDY STORE</text>
+<text x="2150" y="52" font-size="22" font-weight="400" text-anchor="end" fill="#66717e">Guía 03 · Paso 5</text>
+<text x="50" y="91" font-size="23" font-weight="400" text-anchor="start" fill="#66717e">Responsabilidades separadas y dependencias del código hacia el núcleo del negocio.</text>
+<circle cx="550" cy="675" r="500" fill="#d9edfc" stroke="#778594" stroke-width="2.5" />
+<circle cx="550" cy="675" r="390" fill="#dcf2dc" stroke="#778594" stroke-width="2.5" />
+<circle cx="550" cy="675" r="280" fill="#f8d8d8" stroke="#778594" stroke-width="2.5" />
+<circle cx="550" cy="675" r="170" fill="#fcf2bd" stroke="#778594" stroke-width="2.5" />
+<text x="550" y="236" font-size="27" font-weight="700" text-anchor="middle" fill="#202833">FRAMEWORKS Y DRIVERS</text>
+<text x="550" y="270" font-size="21" font-weight="400" text-anchor="middle" fill="#202833">Angular · HTTP · tecnologías externas</text>
+<text x="550" y="328" font-size="26" font-weight="700" text-anchor="middle" fill="#202833">ADAPTADORES</text>
+<text x="550" y="359" font-size="24" font-weight="700" text-anchor="middle" fill="#202833">DE INTERFAZ</text>
+<text x="550" y="390" font-size="19" font-weight="400" text-anchor="middle" fill="#202833">Presentación · Infraestructura</text>
+<text x="550" y="455" font-size="28" font-weight="700" text-anchor="middle" fill="#202833">APLICACIÓN</text>
+<text x="550" y="489" font-size="23" font-weight="400" text-anchor="middle" fill="#202833">Casos de uso</text>
+<text x="550" y="637" font-size="30" font-weight="700" text-anchor="middle" fill="#202833">DOMINIO</text>
+<text x="550" y="681" font-size="21" font-weight="400" text-anchor="middle" fill="#202833">Producto · Carrito · Pedido</text>
+<text x="550" y="713" font-size="18" font-weight="400" text-anchor="middle" fill="#202833">Empresa · stock · precios en céntimos</text>
+<text x="550" y="745" font-size="21" font-weight="400" text-anchor="middle" fill="#202833">Contratos del núcleo</text>
+<text x="550" y="884" font-size="20" font-weight="400" text-anchor="middle" fill="#202833">Consultar catálogo · Agregar al carrito</text>
+<text x="550" y="916" font-size="21" font-weight="400" text-anchor="middle" fill="#202833">Registrar pedido</text>
+<text x="550" y="1010" font-size="20" font-weight="400" text-anchor="middle" fill="#202833">Componentes y repositorios</text>
+<text x="550" y="1030" font-size="20" font-weight="400" text-anchor="middle" fill="#202833">Cobros internos · avisos</text>
+<text x="550" y="1117" font-size="22" font-weight="700" text-anchor="middle" fill="#202833">Tecnologías fuera del núcleo</text>
+<path d="M90 675 H192" fill="none" stroke="#344a63" stroke-width="3" marker-end="url(#arrow)" />
+<path d="M217 675 H300" fill="none" stroke="#344a63" stroke-width="3" marker-end="url(#arrow)" />
+<path d="M329 675 H397" fill="none" stroke="#344a63" stroke-width="3" marker-end="url(#arrow)" />
+<rect x="1110" y="175" width="1040" height="1010" rx="8" fill="#fbfcfd" stroke="#bac3ca" stroke-width="2" />
+<text x="1140" y="219" font-size="27" font-weight="700" text-anchor="start" fill="#202833">Aplicación al boilerplate de Venddy</text>
+<text x="1140" y="253" font-size="20" font-weight="400" text-anchor="start" fill="#66717e">Las flechas representan imports y contratos, no llamadas HTTP.</text>
+<rect x="1150" y="300" width="410" height="175" rx="4" fill="#e1eaf6" stroke="#7e9bcc" stroke-width="2" />
+<text x="1355" y="341" font-size="25" font-weight="700" text-anchor="middle" fill="#202833">PRESENTACIÓN</text>
+<text x="1355" y="382" font-size="22" font-weight="400" text-anchor="middle" fill="#202833">CatalogoComponent</text>
+<text x="1355" y="412" font-size="22" font-weight="400" text-anchor="middle" fill="#202833">CarritoComponent</text>
+<text x="1355" y="442" font-size="22" font-weight="400" text-anchor="middle" fill="#202833">EstadoCarrito</text>
+<rect x="1690" y="300" width="420" height="175" rx="4" fill="#f8d8d8" stroke="#c79898" stroke-width="2" />
+<text x="1900" y="341" font-size="25" font-weight="700" text-anchor="middle" fill="#202833">APLICACIÓN</text>
+<text x="1900" y="382" font-size="20" font-weight="400" text-anchor="middle" fill="#202833">ConsultarCatalogoCasoUso</text>
+<text x="1900" y="412" font-size="20" font-weight="400" text-anchor="middle" fill="#202833">AgregarAlCarritoCasoUso</text>
+<text x="1900" y="442" font-size="20" font-weight="400" text-anchor="middle" fill="#202833">RegistrarPedidoCasoUso</text>
+<path d="M1560 389 H1688" fill="none" stroke="#344a63" stroke-width="3" marker-end="url(#arrow)" />
+<rect x="1596.5" y="349" width="57.0" height="31" rx="0" fill="white" stroke="white" stroke-width="2" />
+<text x="1625" y="371" font-size="20" font-weight="400" text-anchor="middle" fill="#344a63">usa</text>
+<rect x="1430" y="645" width="680" height="260" rx="4" fill="#fcf2bd" stroke="#c5b56b" stroke-width="2" />
+<text x="1770" y="686" font-size="27" font-weight="700" text-anchor="middle" fill="#202833">DOMINIO</text>
+<text x="1770" y="725" font-size="23" font-weight="400" text-anchor="middle" fill="#202833">Producto · Carrito · Pedido · precios</text>
+<text x="1770" y="771" font-size="23" font-weight="700" text-anchor="middle" fill="#202833">Contratos en dominio/contratos/</text>
+<text x="1770" y="809" font-size="22" font-weight="400" text-anchor="middle" fill="#202833">RepositorioProductos · RepositorioPedidos</text>
+<text x="1770" y="841" font-size="22" font-weight="400" text-anchor="middle" fill="#202833">RegistradorCobros · NotificadorPedido</text>
+<text x="1770" y="878" font-size="20" font-weight="400" text-anchor="middle" fill="#66717e">Sin dependencias de Angular ni de adaptadores.</text>
+<path d="M1900 475 V643" fill="none" stroke="#344a63" stroke-width="3" marker-end="url(#arrow)" />
+<rect x="1830.25" y="537" width="139.5" height="31" rx="0" fill="white" stroke="white" stroke-width="2" />
+<text x="1900" y="559" font-size="21" font-weight="400" text-anchor="middle" fill="#344a63">depende de</text>
+<rect x="1150" y="960" width="960" height="180" rx="4" fill="#dcf2dc" stroke="#91b578" stroke-width="2" />
+<text x="1180" y="1001" font-size="25" font-weight="700" text-anchor="start" fill="#202833">INFRAESTRUCTURA</text>
+<text x="1180" y="1044" font-size="20" font-weight="400" text-anchor="start" fill="#202833">Repositorios en memoria / HTTP · Cobros internos en memoria / HTTP</text>
+<text x="1180" y="1076" font-size="22" font-weight="400" text-anchor="start" fill="#202833">Avisos en consola / tiempo real · Tokens de Angular</text>
+<text x="1180" y="1108" font-size="22" font-weight="400" text-anchor="start" fill="#202833">Implementaciones externas que cumplen contratos del núcleo.</text>
+<path d="M1770 960 V907" fill="none" stroke="#344a63" stroke-width="3" marker-end="url(#arrow)" />
+<rect x="1648.0" y="918" width="244.00000000000003" height="31" rx="0" fill="white" stroke="white" stroke-width="2" />
+<text x="1770" y="940" font-size="20" font-weight="400" text-anchor="middle" fill="#344a63">implementa contratos</text>
+<text x="1150" y="559" font-size="22" font-weight="700" text-anchor="start" fill="#546271">El núcleo desconoce</text>
+<text x="1150" y="590" font-size="22" font-weight="700" text-anchor="start" fill="#546271">las implementaciones</text>
+<text x="1150" y="621" font-size="22" font-weight="700" text-anchor="start" fill="#546271">concretas externas.</text>
+<rect x="50" y="1230" width="1040" height="155" rx="4" fill="#f6f7f9" stroke="#bac3ca" stroke-width="2" />
+<text x="78" y="1270" font-size="24" font-weight="700" text-anchor="start" fill="#202833">RAÍZ DE COMPOSICIÓN · app.config.ts</text>
+<text x="78" y="1311" font-size="21" font-weight="400" text-anchor="start" fill="#202833">Selecciona repositorios y notificaciones concretos.</text>
+<text x="78" y="1340" font-size="21" font-weight="400" text-anchor="start" fill="#202833">Inyecta los contratos que necesitan los casos de uso.</text>
+<text x="78" y="1369" font-size="21" font-weight="400" text-anchor="start" fill="#202833">Conoce las implementaciones; el dominio no necesita conocerlas.</text>
+<rect x="1120" y="1230" width="1030" height="155" rx="4" fill="#f6f7f9" stroke="#bac3ca" stroke-width="2" />
+<text x="1148" y="1270" font-size="24" font-weight="700" text-anchor="start" fill="#202833">REGLA DE DEPENDENCIAS</text>
+<text x="1148" y="1311" font-size="21" font-weight="400" text-anchor="start" fill="#202833">Aplicación → Dominio · Presentación → Aplicación / Dominio</text>
+<text x="1148" y="1340" font-size="21" font-weight="400" text-anchor="start" fill="#202833">Infraestructura → contratos del núcleo</text>
+<text x="1148" y="1369" font-size="21" font-weight="400" text-anchor="start" fill="#202833">El flujo de ejecución puede salir al adaptador mediante un contrato.</text>
+<text x="50" y="1435" font-size="19" font-weight="400" text-anchor="start" fill="#66717e">Referencia: Marketplace y Guía 03, pág. 4. Adaptación académica para Venddy.</text>
+<text x="2150" y="1435" font-size="19" font-weight="400" text-anchor="end" fill="#66717e">El ejemplo Angular en memoria no sustituye al sistema publicado.</text>
+</g></svg>

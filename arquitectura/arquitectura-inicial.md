@@ -1,5 +1,7 @@
 # Arquitectura inicial de Venddy Store
 
+> **Antecedente de la Guía 02.** Este documento y sus diagramas conservan la propuesta hexagonal inicial y las vistas de infraestructura. Para la Guía 03, por la orientación educativa de la docente, el enfoque académico vigente es [Clean Architecture](enfoque/enfoque-arquitectonico.md) dentro de un [monolito modular](estilo-arquitectonico.md), según [ADR-002](../analisis-de-sistema/07-%20decisiones-arquitect%C3%B3nicas.md). La actualización del laboratorio no significa que esa reorganización esté desplegada en producción.
+
 Propuesta oficial para el primer lanzamiento: **tres capas, monolito modular y backend hexagonal**. La arquitectura inicial del laboratorio es esta base de lanzamiento; las ampliaciones futuras se condicionan a mediciones.
 
 ## 1. Alcance funcional
