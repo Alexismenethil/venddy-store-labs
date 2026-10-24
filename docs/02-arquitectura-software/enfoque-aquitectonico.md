@@ -1,6 +1,8 @@
 # Enfoque único: Clean Architecture
 
-![Clean Architecture de Venddy](../../img/diagrama-enfoque-arquitectonico.png)
+![Clean Architecture de Venddy](../../arquitectura/enfoque/diagrama-enfoque-arquitectonico.png)
+
+Se conserva el original de círculos concéntricos y su panel de aplicación a Venddy. Los círculos describen el nivel de las reglas y mecanismos; el panel relaciona esa representación con las cuatro carpetas del ejemplo. No existe una correspondencia obligatoria de un círculo con una carpeta. La raíz de composición queda fuera del núcleo.
 
 | Responsabilidad | Venddy | Dependencia permitida |
 |---|---|---|
@@ -15,4 +17,4 @@ En el ejemplo, los contratos están en `dominio/contratos/`. El caso de uso reci
 
 ADR-002 responde a DA04 y AC05. El estilo monolito modular define cómo se organiza/despliega el backend; Clean define sus responsabilidades y dependencias.
 
-[SVG](../../img/fuentes-svg/diagrama-enfoque-arquitectonico.svg) · [PDF](../../img/diagrama-enfoque-arquitectonico.pdf) · [Diseño de Pedidos](../03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md).
+[SVG](../../arquitectura/enfoque/diagrama-enfoque-arquitectonico.svg) · [PDF](../../arquitectura/enfoque/diagrama-enfoque-arquitectonico.pdf) · [Diseño de Pedidos](../03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md).

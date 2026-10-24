@@ -45,6 +45,20 @@ El repositorio académico no contiene ocho backends implementados: demuestra una
 
 **Evidencia:** ADR-001/ADR-002 y las figuras `diagrama-estilo-arquitectonico.png` y `diagrama-enfoque-arquitectonico.png`.
 
+### ¿Por qué elegimos Clean en lugar de hexagonal?
+
+**Respuesta oral:** “Para Venddy elegimos Clean porque ya separamos las reglas de Producto, Carrito y Pedido de los casos de uso y de las herramientas externas. Podemos demostrar esa separación en el ejemplo y sus pruebas, y relacionarla con los diagramas y las carpetas. Nos ayuda a mantener las reglas de precios, stock y estados sin mezclarlas con pantallas o persistencia. Por eso es la elección más conveniente para el alcance actual y su evaluación”.
+
+**Comparación correcta:** hexagonal también permite aislar y probar el negocio mediante puertos y adaptadores. Esos beneficios no son exclusivos de Clean. Clean explicita entidades, casos de uso y la dirección de las dependencias que estamos mostrando. No hay evidencia para afirmar que una sea automáticamente más rápida, segura o disponible. La elección requiere mantener límites y añade abstracciones que no conviene introducir sin necesidad.
+
+**¿Los contratos y adaptadores significan que seguimos usando otro enfoque?** No. Clean utiliza interfaces del núcleo e implementaciones externas para invertir dependencias. Tener `RepositorioPedidos` y un adaptador no contradice el enfoque elegido.
+
+Fuentes primarias: [Robert C. Martin, Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) y [Alistair Cockburn, Ports and Adapters](https://alistair.cockburn.us/hexagonal-architecture/). La preferencia para Venddy es una decisión del proyecto basada en su estructura y alcance, no una clasificación universal.
+
+### ¿Por qué el gráfico del monolito tiene tres capas y Clean cuatro responsabilidades?
+
+El gráfico original del monolito agrupa la ejecución en Presentación, Negocio y Datos. En la vista detallada, Negocio se separa en Aplicación y Dominio; Datos corresponde a mecanismos de Infraestructura. Las cuatro carpetas son una organización interna. Las flechas de ejecución del monolito no establecen la dirección de imports. El gráfico original de Clean sí muestra dependencias hacia el núcleo. No contamos carpetas para decidir si se cumple Clean: comprobamos responsabilidades y dependencias.
+
 ## 4. ¿Por qué monolito modular y no microservicios?
 
 **Respuesta oral:** “Nuestro recorrido exige coherencia entre pedido, inventario y cobro, y no tenemos una necesidad medida de desplegar cada módulo por separado. Una API reduce la operación distribuida mientras los límites modulares mantienen las responsabilidades. Si una función necesitara carga o despliegue independiente, lo justificaríamos con evidencia antes de extraerla”.
@@ -159,16 +173,26 @@ El ejemplo activo usa memoria y consola. Sus parámetros de negocio/mesa dan con
 
 ## 13. Recorrido recomendado para exponer
 
-1. Explica el problema y el flujo QR–pedido–cocina–cobro–cierre.
-2. Presenta los requisitos que protegen negocio, precios, reintentos y caja.
-3. Conecta esos requisitos con DA01–DA04 y ADR-001/002/004/005/006.
-4. Enseña el monolito y los ocho módulos; justifica una API.
-5. Explica Clean sobre las responsabilidades reales de Venddy.
-6. Recorre datos, archivos y recuperación sin prometer failover.
-7. Defiende el caso de aviso fallido y el reintento idempotente.
-8. Muestra qué revisas en calidad y recorre C1–C4 según la pregunta.
+| Diapositiva | Qué explicar |
+|---|---|
+| 1. Venddy Store | Problema del negocio y elección: monolito modular con Clean. |
+| 2. Flujo | QR, carta, pedido, preparación, cobro y cierre. El servidor valida antes de confirmar. |
+| 3. Requisitos | Negocio correcto, precio/stock, reintentos, preparación y caja. |
+| 4. Drivers | Relacionar aislamiento, integridad, coordinación y mantenibilidad con sus ADR. |
+| 5. C1 | Usuarios de Venddy y servicio opcional de identidad. |
+| 6. C2 | Web, API, PostgreSQL y archivos. |
+| 7. Monolito original | Actores, cliente web, cinco columnas, ocho módulos, datos y servicios externos. |
+| 8. C3 | Colaboraciones entre los ocho módulos dentro de la API. |
+| 9. Clean original | Círculos, cuatro carpetas, contratos internos y raíz de composición. |
+| 10. C4: clases | Caso de uso, Pedido, interfaces y adaptadores del ejemplo. |
+| 11. Repository y Adapter | Contrato de productos e implementaciones de memoria/HTTP. |
+| 12. Observer | Publicación del pedido confirmado y suscriptores autorizados; diseño propuesto. |
+| 13. SOLID | Responsabilidades, sustitución e inversión aplicadas a los archivos del ejemplo. |
+| 14. Secuencia | Registrar, confirmar y después avisar. El reintento se reconoce antes de reservar de nuevo. |
+| 15. Almacenamiento | Diferenciar datos operativos, fotos, respaldo y restauración bajo demanda. |
+| 16. Calidad | Qué se prueba en memoria y qué revisiones integrales siguen pendientes. |
 
-Para una exposición breve, los detalles de archivos y C4 sirven como apoyo para preguntas. Responde primero en 30–45 segundos; amplía abriendo la evidencia cuando la docente lo pida.
+Los casos de falla, la comparación con el enfoque anterior y las preguntas de defensa se estudian fuera del PPT. Responde primero en 30–45 segundos y amplía abriendo la evidencia cuando la docente lo pida. Las diapositivas 7 y 9 usan los archivos originales recuperados, sin redibujar sus gráficos.
 
 ## 14. Mapa de carpetas
 
@@ -179,7 +203,8 @@ Para una exposición breve, los detalles de archivos y C4 sirven como apoyo para
 | `docs/03-diseño-de-software/diseño-interno/` | Detalla responsabilidades y colaboración de Pedidos. | Clases, contratos, secuencia, patrones y SOLID aplicados. |
 | `docs/04-modelo-c4/` | Comunica la misma solución desde contexto hasta clases. | Elegir el nivel de detalle adecuado a la pregunta. |
 | `docs/05-sustentacion/` | Reúne la preparación oral y este inventario. | Preguntas y enlaces de evidencia. |
-| `img/` | Guarda imágenes que usan los Markdown y el PPT. | PNG para pantalla; PDF para ampliar o imprimir. |
+| `arquitectura/` | Conserva los originales de estilo y Clean restaurados sin redibujar. | Círculos de Clean y monolito de cinco columnas; PNG, SVG y PDF. |
+| `img/` | Guarda C4 y diagramas complementarios. | PNG para pantalla; PDF para ampliar o imprimir. |
 | `img/fuentes-svg/` | Conserva el diagrama editable y trazable. | La fuente SVG, que permite actualizar textos y relaciones. |
 | `tecnologia/boilerplate-clean-arquitecture/` | Aísla la demostración tecnológica de la documentación. | Su README y las cuatro responsabilidades de `src/app/`. |
 | `src/app/dominio/modelos/` | Conserva reglas que siguen siendo válidas sin framework. | Precio en céntimos, stock y estados válidos. |
@@ -269,13 +294,15 @@ Las rutas siguientes parten de `tecnologia/boilerplate-clean-arquitecture/`.
 
 ### Gráficas y fuentes
 
-Cada nombre tiene tres archivos: `img/<nombre>.png` para mostrar, `img/<nombre>.pdf` para ampliar/imprimir e `img/fuentes-svg/<nombre>.svg` para editar. Los tres representan la misma vista; no son tres arquitecturas.
+Los originales se conservan en `arquitectura/diagrama-estilo-arquitectonico.{png,pdf,svg}` y `arquitectura/enfoque/diagrama-enfoque-arquitectonico.{png,pdf,svg}`. Cada PNG muestra el gráfico, el PDF permite ampliarlo y el SVG conserva su fuente editable. `arquitectura/README.md` identifica su procedencia.
+
+Las vistas complementarias mantienen `img/<nombre>.png`, `img/<nombre>.pdf` e `img/fuentes-svg/<nombre>.svg`. Los formatos representan la misma vista.
 
 | Nombre | Qué contiene y por qué |
 |---|---|
 | `diagrama-arquitectura` | Web, API, PostgreSQL y fotos; comunica la estructura general seleccionada. |
-| `diagrama-estilo-arquitectonico` | Una API con ocho módulos; muestra la unidad de despliegue y límites funcionales. |
-| `diagrama-enfoque-arquitectonico` | Cuatro responsabilidades y dependencias hacia el núcleo de Venddy. |
+| `diagrama-estilo-arquitectonico` | Original de cinco columnas que agrupan ocho módulos y tres responsabilidades globales. Sus flechas representan ejecución. |
+| `diagrama-enfoque-arquitectonico` | Original de círculos concéntricos y panel de dependencias aplicado a las cuatro carpetas de Venddy. |
 | `flujo-pedido` | Atención desde QR hasta cierre y validación del pedido; explica el recorrido del negocio. |
 | `almacenamiento-y-recuperacion` | Principal, fotos, respaldo privado y base de restauración; evita confundir datos con objetos o una copia con failover. |
 | `nivel1-contexto` | Personas, Venddy y servicio opcional de identidad; responde quién interactúa. |

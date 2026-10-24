@@ -12,7 +12,7 @@ Plataforma multiempresa para negocios de comida: carta QR, pedidos, cocina, caja
 | Stack del sistema | Next.js/React, Express/Socket.IO, Prisma/PostgreSQL. |
 | Alcance de este repositorio | Análisis, arquitectura, diseño, C4 y demostración académica. |
 
-![Arquitectura de Venddy](img/diagrama-arquitectura.png)
+![Clean Architecture original de Venddy](arquitectura/enfoque/diagrama-enfoque-arquitectonico.png)
 
 | Carpeta | Contenido |
 |---|---|
@@ -21,7 +21,8 @@ Plataforma multiempresa para negocios de comida: carta QR, pedidos, cocina, caja
 | [docs/03-diseño-de-software](docs/03-diseño-de-software) | Diseño de Pedidos, patrones y principios SOLID aplicados. |
 | [docs/04-modelo-c4](docs/04-modelo-c4) | Contexto, contenedores, componentes, clases y secuencia. |
 | [docs/05-sustentacion](docs/05-sustentacion) | Respuestas de defensa y recorrido de carpetas y archivos. |
-| [img](img) | Gráficas PNG/PDF y fuentes SVG editables de la misma propuesta. |
+| [arquitectura](arquitectura) | Diagramas originales de estilo y Clean Architecture, con sus PNG, SVG y PDF. |
+| [img](img) | Vistas C4 y diagramas complementarios, con sus fuentes SVG. |
 | [tecnologia/boilerplate-clean-arquitecture](tecnologia/boilerplate-clean-arquitecture) | Carta, carrito y pedidos académicos en memoria. |
 
 **Datos:** PostgreSQL conserva pedidos, cobros y stock. Las fotos usan almacenamiento de objetos. Una base separada de recuperación es un objetivo de restauración, sin tráfico comercial ni conmutación automática. [Detalle](docs/02-arquitectura-software/almacenamiento-y-recuperacion.md).
