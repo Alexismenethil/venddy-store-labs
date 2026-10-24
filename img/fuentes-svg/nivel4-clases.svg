@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="white"/><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#196bdb"/></marker><marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#008f86"/></marker></defs>
+<text x="36" y="48" font-family="Arial, sans-serif" font-size="34" fill="#082d50" font-weight="700" text-anchor="start">C4. Clases y contratos de Pedidos</text>
+<text x="36" y="86" font-family="Arial, sans-serif" font-size="21" fill="#52697d" font-weight="400" text-anchor="start">Detalle del ejemplo académico. Los adaptadores remotos del sistema deben conservar estas garantías.</text>
+<rect x="45" y="125" width="430" height="140" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="260.0" y="162" font-family="Arial, sans-serif" font-size="26" fill="#082d50" font-weight="700" text-anchor="middle">RegistrarPedidoCasoUso</text>
+<text x="260.0" y="199" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">ejecutar(RegistroPedido)</text>
+<text x="260.0" y="227" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Devuelve pedido y estado del aviso</text>
+<rect x="760" y="125" width="475" height="140" rx="5" fill="#082d50" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="997.5" y="162" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="700" text-anchor="middle">Pedido</text>
+<text x="997.5" y="199" font-family="Arial, sans-serif" font-size="21" fill="white" font-weight="400" text-anchor="middle">id, negocioId, mesa, LineaPedido[]</text>
+<text x="997.5" y="228" font-family="Arial, sans-serif" font-size="21" fill="white" font-weight="400" text-anchor="middle">totalCentimos y estadoActual</text>
+<rect x="45" y="345" width="430" height="145" rx="5" fill="#e8f7f2" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="260.0" y="382" font-family="Arial, sans-serif" font-size="25" fill="#082d50" font-weight="700" text-anchor="middle">RepositorioPedidos</text>
+<text x="260.0" y="419" font-family="Arial, sans-serif" font-size="21" fill="#082d50" font-weight="400" text-anchor="middle">registrarAtomico(registro)</text>
+<text x="260.0" y="448" font-family="Arial, sans-serif" font-size="21" fill="#082d50" font-weight="400" text-anchor="middle">buscarPorId / listarPorCliente</text>
+<text x="57" y="476" font-family="Arial, sans-serif" font-size="17" fill="#082d50" font-weight="400" text-anchor="start">Interfaz del dominio</text>
+<rect x="760" y="345" width="475" height="145" rx="5" fill="#e8f7f2" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="997.5" y="382" font-family="Arial, sans-serif" font-size="26" fill="#082d50" font-weight="700" text-anchor="middle">NotificadorPedido</text>
+<text x="997.5" y="419" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="400" text-anchor="middle">confirmarPedido(pedido)</text>
+<text x="772" y="476" font-family="Arial, sans-serif" font-size="17" fill="#082d50" font-weight="400" text-anchor="start">Interfaz del dominio</text>
+<rect x="45" y="565" width="430" height="82" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="260.0" y="602" font-family="Arial, sans-serif" font-size="24" fill="#082d50" font-weight="700" text-anchor="middle">RepositorioPedidosMemoria</text>
+<rect x="760" y="565" width="475" height="82" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="997.5" y="602" font-family="Arial, sans-serif" font-size="25" fill="#082d50" font-weight="700" text-anchor="middle">NotificadorConsola</text>
+<polyline points="475,193 760,193" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<text x="588" y="174" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">recibe</text>
+<polyline points="230,265 230,345" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<text x="249" y="312" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">usa</text>
+<polyline points="475,238 620,238 620,416 760,416" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<text x="636" y="383" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">usa</text>
+<polyline points="230,565 230,490" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="7" marker-end="url(#green)"/>
+<text x="246" y="536" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">implementa</text>
+<polyline points="997,565 997,490" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="7" marker-end="url(#green)"/>
+<text x="1014" y="536" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">implementa</text>
+<text x="36" y="690" font-family="Arial, sans-serif" font-size="21" fill="#52697d" font-weight="400" text-anchor="start">LineaPedido es una interfaz. El caso de uso depende de contratos, no de las clases concretas.</text>
+</svg>

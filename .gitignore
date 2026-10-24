@@ -21,3 +21,10 @@ arquitectura/*.finalize.json
 arquitectura/*.finalize-summary.json
 arquitectura/*.browser-check.json
 arquitectura/archify-review*/
+
+# Resultados reproducibles de compilación y pruebas
+dist/
+dist-pruebas/
+.angular/
+out-tsc/
+coverage/

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="white"/><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#196bdb"/></marker><marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#008f86"/></marker></defs>
+<text x="36" y="48" font-family="Arial, sans-serif" font-size="34" fill="#082d50" font-weight="700" text-anchor="start">C4. Secuencia de registro del pedido</text>
+<text x="36" y="86" font-family="Arial, sans-serif" font-size="21" fill="#52697d" font-weight="400" text-anchor="start">Para un pedido nuevo. Un intento existente se reconoce antes de volver a reservar stock.</text>
+<rect x="20.0" y="125" width="190" height="69" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="115.0" y="162" font-family="Arial, sans-serif" font-size="21" fill="#082d50" font-weight="700" text-anchor="middle">Comensal / entrada</text>
+<line x1="115" y1="194" x2="115" y2="645" stroke="#a9bdcf" stroke-width="1.6" stroke-dasharray="6 5"/>
+<rect x="290.0" y="125" width="190" height="69" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="385.0" y="162" font-family="Arial, sans-serif" font-size="21" fill="#082d50" font-weight="700" text-anchor="middle">Caso de uso</text>
+<line x1="385" y1="194" x2="385" y2="645" stroke="#a9bdcf" stroke-width="1.6" stroke-dasharray="6 5"/>
+<rect x="547.5" y="125" width="205" height="69" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="650.0" y="162" font-family="Arial, sans-serif" font-size="21" fill="#082d50" font-weight="700" text-anchor="middle">Repositorio pedidos</text>
+<line x1="650" y1="194" x2="650" y2="645" stroke="#a9bdcf" stroke-width="1.6" stroke-dasharray="6 5"/>
+<rect x="835.0" y="125" width="170" height="69" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="920.0" y="162" font-family="Arial, sans-serif" font-size="21" fill="#082d50" font-weight="700" text-anchor="middle">Inventario</text>
+<line x1="920" y1="194" x2="920" y2="645" stroke="#a9bdcf" stroke-width="1.6" stroke-dasharray="6 5"/>
+<rect x="1075.0" y="125" width="170" height="69" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="1160.0" y="162" font-family="Arial, sans-serif" font-size="21" fill="#082d50" font-weight="700" text-anchor="middle">Notificador</text>
+<line x1="1160" y1="194" x2="1160" y2="645" stroke="#a9bdcf" stroke-width="1.6" stroke-dasharray="6 5"/>
+<polyline points="115,245 385,245" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<text x="127" y="233" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">Negocio, mesa, carrito y clave</text>
+<polyline points="385,310 650,310" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<text x="397" y="298" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">Registrar pedido</text>
+<polyline points="650,375 920,375" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<text x="662" y="363" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">Releer precios y reservar stock</text>
+<polyline points="650,440 385,440" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="7" marker-end="url(#green)"/>
+<text x="397" y="428" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">Pedido guardado y reserva confirmada</text>
+<polyline points="385,505 1160,505" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<text x="397" y="493" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">Avisar después de confirmar</text>
+<polyline points="1160,565 385,565" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="7" marker-end="url(#green)"/>
+<text x="397" y="553" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">Éxito o error del aviso</text>
+<polyline points="385,625 115,625" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="7" marker-end="url(#green)"/>
+<text x="127" y="613" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">Pedido y avisoPendiente</text>
+<text x="36" y="690" font-family="Arial, sans-serif" font-size="21" fill="#52697d" font-weight="400" text-anchor="start">Un aviso fallido conserva el pedido. El mismo intento no duplica la reserva. Caja cobra después.</text>
+</svg>

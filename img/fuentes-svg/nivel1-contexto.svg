@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="white"/><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#196bdb"/></marker><marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#008f86"/></marker></defs>
+<text x="36" y="48" font-family="Arial, sans-serif" font-size="34" fill="#082d50" font-weight="700" text-anchor="start">C1. Contexto de Venddy</text>
+<text x="36" y="86" font-family="Arial, sans-serif" font-size="21" fill="#52697d" font-weight="400" text-anchor="start">Quién utiliza el sistema y para qué. La fidelidad es opcional.</text>
+<rect x="445" y="263" width="390" height="157" rx="5" fill="#082d50" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="640.0" y="300" font-family="Arial, sans-serif" font-size="35" fill="white" font-weight="700" text-anchor="middle">Venddy Store</text>
+<text x="640.0" y="337" font-family="Arial, sans-serif" font-size="22" fill="white" font-weight="400" text-anchor="middle">Operación de negocios de comida</text>
+<rect x="35" y="158" width="295" height="115" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="182.5" y="195" font-family="Arial, sans-serif" font-size="27" fill="#082d50" font-weight="700" text-anchor="middle">Comensal</text>
+<text x="182.5" y="232" font-family="Arial, sans-serif" font-size="22" fill="#082d50" font-weight="400" text-anchor="middle">Consulta carta y pide</text>
+<rect x="35" y="431" width="295" height="115" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="182.5" y="468" font-family="Arial, sans-serif" font-size="25" fill="#082d50" font-weight="700" text-anchor="middle">Administrador</text>
+<text x="182.5" y="505" font-family="Arial, sans-serif" font-size="22" fill="#082d50" font-weight="400" text-anchor="middle">Configura su negocio</text>
+<rect x="950" y="158" width="295" height="115" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="1097.5" y="195" font-family="Arial, sans-serif" font-size="25" fill="#082d50" font-weight="700" text-anchor="middle">Preparación y caja</text>
+<text x="1097.5" y="232" font-family="Arial, sans-serif" font-size="21" fill="#082d50" font-weight="400" text-anchor="middle">Preparan, cobran y cierran</text>
+<rect x="950" y="431" width="295" height="115" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="1097.5" y="468" font-family="Arial, sans-serif" font-size="25" fill="#082d50" font-weight="700" text-anchor="middle">Plataforma / soporte</text>
+<text x="1097.5" y="505" font-family="Arial, sans-serif" font-size="21" fill="#082d50" font-weight="400" text-anchor="middle">Gestionan el servicio</text>
+<rect x="445" y="560" width="390" height="91" rx="5" fill="#e8f7f2" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="640.0" y="597" font-family="Arial, sans-serif" font-size="26" fill="#082d50" font-weight="700" text-anchor="middle">Google Identity</text>
+<text x="640.0" y="634" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Fidelidad opcional</text>
+<polyline points="330,216 385,216 385,310 445,310" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<polyline points="330,489 385,489 385,375 445,375" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<polyline points="950,216 890,216 890,310 835,310" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<polyline points="950,489 890,489 890,375 835,375" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<polyline points="640,420 640,560" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
+<text x="36" y="690" font-family="Arial, sans-serif" font-size="21" fill="#52697d" font-weight="400" text-anchor="start">Los roles operan dentro de permisos. Consultar la carta no exige registro obligatorio del comensal.</text>
+</svg>
