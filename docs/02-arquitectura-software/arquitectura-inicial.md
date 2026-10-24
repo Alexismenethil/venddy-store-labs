@@ -2,6 +2,8 @@
 
 **Estilo:** monolito modular. **Enfoque:** Clean Architecture.
 
+[Diagrama interactivo de la arquitectura objetivo — Archify](arquitectura-archify.html). Descargar el HTML y abrirlo en el navegador; incluye el visor y sus recursos.
+
 ![Arquitectura general](../../img/nivel2-contenedores.png)
 
 | Elemento | Función |
