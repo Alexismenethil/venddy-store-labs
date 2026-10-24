@@ -1,18 +1,22 @@
-# Arquitectura general de Venddy
+# Arquitectura inicial de Venddy
 
-**Estilo:** monolito modular. **Enfoque:** Clean Architecture. Esta es la única propuesta activa del primer sprint.
+**Estilo:** monolito modular. **Enfoque:** Clean Architecture.
 
-![Arquitectura general](../../img/diagrama-arquitectura.png)
+![Arquitectura general](../../img/nivel2-contenedores.png)
 
 | Elemento | Función |
 |---|---|
 | Next.js / React | Carta QR y pantallas de cocina, caja y administración. |
 | API Express / Socket.IO | Autorización, casos de uso y comunicación por negocio. |
 | Prisma / PostgreSQL en Neon | Persistencia y transacciones de pedidos, cobros y stock. |
-| Almacenamiento de objetos | Fotos y archivos; Cloudinary en el informe del 02/10/2026 y R2 como objetivo de migración. |
+| Almacenamiento de objetos | Fotografías y archivos; PostgreSQL conserva sus referencias. |
 
-La API confirma las operaciones antes de avisar. Al reconectar se recupera el estado por REST. Las credenciales de datos y servicios permanecen en el servidor.
+La API conserva empresa y permisos en cada operación. Confirma el registro antes de avisar; al reconectar, los clientes recuperan el estado por REST. Las credenciales permanecen en el servidor.
 
-[Fuentes SVG](../../img/fuentes-svg/diagrama-arquitectura.svg) · [PDF](../../img/diagrama-arquitectura.pdf) · [Módulos](componentes-arquitectonicos.md) · [Datos, archivos y recuperación](almacenamiento-y-recuperacion.md).
+## Datos y recuperación
 
-El stack procede del informe de Venddy. Este repositorio documenta la solución y contiene una demostración académica; no equivale a inspeccionar el despliegue actual. No fija capacidad ni disponibilidad sin ensayo.
+PostgreSQL atiende la operación. Las fotografías usan almacenamiento externo: Cloudinary en el informe del 02/10/2026 y R2 como objetivo de migración. Las copias deben conservarse en un espacio privado con permisos separados.
+
+La base de recuperación propuesta permite restaurar y validar copias en un entorno aislado bajo demanda. No recibe tráfico comercial ni implica réplica activa o conmutación automática. Los objetivos RPO 24 h y RTO 2 h requieren ensayos de restauración.
+
+[Componentes](componentes-arquitectonicos.md) · [Estilo](estilo-arquitectonico.md) · [Enfoque](enfoque-aquitectonico.md).

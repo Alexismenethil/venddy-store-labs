@@ -4,9 +4,9 @@
 
 **Alcance:** Clases, interfaces y colaboraciones del núcleo de Pedidos.
 
-Usa los nombres reales del ejemplo y distingue entidad, interfaz y adaptador. Un diseño PostgreSQL futuro debe conservar el contrato demostrado en memoria.
+El diagrama distingue entidad, interfaces y adaptadores del ejemplo. La persistencia PostgreSQL debe conservar las garantías del contrato.
 
-[SVG](../../img/fuentes-svg/nivel4-clases.svg) · [PDF](../../img/nivel4-clases.pdf).
+[SVG](../../img/fuentes-svg/nivel4-clases.svg).
 
 ![Secuencia de Pedidos](../../img/nivel4-secuencia.png)
 

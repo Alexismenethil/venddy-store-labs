@@ -1,4 +1,4 @@
-# Archivos del sistema y temporales de editores
+# Archivos del sistema y editores
 .DS_Store
 Thumbs.db
 *.swp
@@ -9,22 +9,20 @@ Thumbs.db
 .env.*
 !.env.example
 
-# Dependencias y resultados de herramientas
+# Dependencias y resultados reproducibles
 node_modules/
 .cache/
-
-# Evidencia local de generación y revisión del diagrama
-.archify/
-arquitectura/*.delivery.json
-arquitectura/*.delivery-pending.json
-arquitectura/*.finalize.json
-arquitectura/*.finalize-summary.json
-arquitectura/*.browser-check.json
-arquitectura/archify-review*/
-
-# Resultados reproducibles de compilación y pruebas
 dist/
 dist-pruebas/
 .angular/
 out-tsc/
 coverage/
+
+# Material local y exportaciones
+.build/
+.local/
+output/
+docs/05-sustentacion/
+sustentacion/
+*.ppt
+*.pptx

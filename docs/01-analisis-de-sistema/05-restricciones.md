@@ -17,4 +17,4 @@
 | RC13 | Recuperación separada | Base de restauración bajo demanda, sin tráfico comercial ni failover; RPO/RTO externos son metas por ensayar. |
 | RC14 | Organización seleccionada | Monolito modular y Clean Architecture; cuatro responsabilidades con dependencias hacia el núcleo. |
 
-El informe del 02/10/2026 describió Vercel, Render, Neon y Cloudinary. Los objetivos Workers/R2 y recuperación no se presentan como migraciones ya ejecutadas. [Detalle de datos y archivos](../02-arquitectura-software/almacenamiento-y-recuperacion.md).
+El informe del 02/10/2026 describió Vercel, Render, Neon y Cloudinary. Los objetivos Workers/R2 y recuperación no se presentan como migraciones ya ejecutadas. [Detalle de datos y archivos](../02-arquitectura-software/arquitectura-inicial.md#datos-y-recuperacion).

@@ -15,4 +15,4 @@ Clean Architecture permite explicar de forma explícita qué reglas pertenecen a
 
 El monolito modular conserva transacciones y operación de una API. Los microservicios introducirían despliegues y coordinación distribuida sin una necesidad de independencia demostrada. Los módulos colaboran por contratos y no acceden al repositorio interno de otro módulo. La modularidad no garantiza capacidad ni continuidad ante la caída de la única instancia.
 
-[Estilo](../02-arquitectura-software/estilo-arquitectonico.md) · [Enfoque](../02-arquitectura-software/enfoque-aquitectonico.md) · [Almacenamiento](../02-arquitectura-software/almacenamiento-y-recuperacion.md).
+[Estilo](../02-arquitectura-software/estilo-arquitectonico.md) · [Enfoque](../02-arquitectura-software/enfoque-aquitectonico.md) · [Almacenamiento](../02-arquitectura-software/arquitectura-inicial.md#datos-y-recuperacion).
