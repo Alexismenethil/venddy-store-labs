@@ -2,9 +2,9 @@
 
 ![Monolito modular](../../img/ArquitecturaMonoliticaVenddyEnCapas.png)
 
-Las cinco columnas agrupan ocho módulos: Identidad y gestión reúne Administración y Plataforma; Caja y ventas agrupa también Reportes y Fidelidad. Las otras columnas son Catálogo, Pedidos/cocina e Inventario.
+Los ocho módulos aparecen separados y numerados dentro del límite de una sola API. Cada bloque muestra una responsabilidad; las flechas destacan colaboraciones por contratos públicos.
 
-Sus tres responsabilidades globales son Presentación, Negocio y Datos. Negocio agrupa Aplicación y Dominio; Datos corresponde a los mecanismos de Infraestructura. Las flechas de esta vista muestran ejecución. Las dependencias del código se precisan en la vista Clean; no se introduce otro enfoque.
+La vista se lee desde Presentación web hacia Aplicación/Dominio e Infraestructura. PostgreSQL, archivos e identidad externa están fuera del proceso de API. Las flechas muestran llamadas durante la ejecución; las dependencias del código se precisan en la vista Clean.
 
 | Decisión | Consecuencia en Venddy |
 |---|---|
