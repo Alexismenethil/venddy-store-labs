@@ -7,7 +7,7 @@ Alexis Huamani Rivera · 27220106
 Plataforma multiempresa para negocios de comida: carta QR, pedidos, cocina, caja e inventario. Monolito modular con Clean Architecture.
 
 ## Caso de estudio
-Venddy Store.
+Venddy Store · `venddy.store`.
 
 ## Curso
 IS-488 Arquitectura de Software · UNSCH · 2026-II.

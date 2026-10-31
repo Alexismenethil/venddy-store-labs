@@ -2,7 +2,7 @@
 
 Curso: **IS-488 Arquitectura de Software** · UNSCH · 2026-II. Docente: Ing. Lizbeth Jaico Quispe.
 
-Demostración académica de Clean Architecture para Venddy Store. Venddy gestiona cartas QR y pedidos de negocios de comida. Este boilerplate Angular 18 es una demostración independiente: no migra el sistema real Next.js / Express / Prisma ni conecta sus servicios.
+Demostración académica de Clean Architecture para Venddy Store. Venddy gestiona cartas QR y pedidos de negocios de comida. Este boilerplate Angular 18 es una demostración independiente: no implementa el sistema completo Next.js / Express / Prisma ni conecta sus servicios.
 
 ## Puesta en marcha
 
@@ -95,7 +95,7 @@ Se usan **productos y pedidos en memoria** y **avisos en consola**. Los precios 
 
 `RegistradorCobros` tiene adaptadores en memoria y HTTP para mostrar la sustitución del contrato del ejemplo. Representa el **registro interno** de efectivo, Yape, Plin o tarjeta ya recibido por el negocio; no envía dinero ni integra una pasarela. Está registrado en la composición, pero **no interviene al confirmar un pedido**. Un futuro caso de uso de caja deberá autenticar al cajero, verificar el negocio y el saldo del pedido, registrar el cobro y actualizar su estado en una transacción. El adaptador aislado no cumple ese flujo completo.
 
-`RepositorioProductosHttp`, `RegistradorCobrosHttp` y `NotificadorTiempoReal` son adaptadores ilustrativos, **sin URL ni servicios configurados**. Sus rutas muestran un contrato propuesto; no se presentan como endpoints existentes del producto real. El notificador de tiempo real publicaría un evento en un backend que luego lo distribuiría a cocina por WebSocket; aquí solo se entrega por consola.
+`RepositorioProductosHttp`, `RegistradorCobrosHttp` y `NotificadorTiempoReal` son adaptadores ilustrativos, **sin URL ni servicios configurados**. Sus rutas muestran un contrato propuesto; no se presentan como endpoints implementados. El notificador de tiempo real publicaría un evento en un backend que luego lo distribuiría a cocina por WebSocket; aquí solo se entrega por consola.
 
 Cambiar productos a HTTP requiere implementar también un repositorio de pedidos en el mismo backend con transacción de inventario y pedido, control de concurrencia e idempotencia. No se debe mezclar inventario remoto con el repositorio local. La atomicidad demostrada aquí corresponde a una instancia JavaScript en memoria, no a varios servidores. El backend futuro deberá obtener el tenant desde la sesión autorizada y verificar permisos, además de filtrar por negocio.
 

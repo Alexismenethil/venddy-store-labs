@@ -78,5 +78,5 @@
 <text x="1148" y="1340" font-size="21" font-weight="400" text-anchor="start" fill="#202833">Infraestructura → contratos del núcleo</text>
 <text x="1148" y="1369" font-size="21" font-weight="400" text-anchor="start" fill="#202833">El flujo de ejecución puede salir al adaptador mediante un contrato.</text>
 <text x="50" y="1435" font-size="19" font-weight="400" text-anchor="start" fill="#66717e">Referencia: Marketplace y Guía 03, pág. 4. Adaptación académica para Venddy.</text>
-<text x="2150" y="1435" font-size="19" font-weight="400" text-anchor="end" fill="#66717e">El ejemplo Angular en memoria no sustituye al sistema publicado.</text>
+<text x="2150" y="1435" font-size="19" font-weight="400" text-anchor="end" fill="#66717e">El ejemplo Angular en memoria no es el sistema completo.</text>
 </g></svg>

@@ -1,39 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
-<rect width="1280" height="720" fill="white"/><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#196bdb"/></marker><marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#008f86"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="920" viewBox="0 0 1280 920">
+<rect width="1280" height="920" fill="white"/><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#196bdb"/></marker><marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#008f86"/></marker></defs>
 <text x="36" y="48" font-family="Arial, sans-serif" font-size="34" fill="#082d50" font-weight="700" text-anchor="start">C3. Componentes de la API Venddy</text>
 <text x="36" y="86" font-family="Arial, sans-serif" font-size="21" fill="#52697d" font-weight="400" text-anchor="start">Todos los módulos viven en el mismo backend; las flechas indican colaboración.</text>
-<rect x="25" y="123" width="1230" height="518" rx="6" fill="none" stroke="#a9bdcf" stroke-width="2" stroke-dasharray="8 5"/>
-<text x="40" y="154" font-family="Arial, sans-serif" font-size="24" fill="#082d50" font-weight="700" text-anchor="start">API con empresa y permisos resueltos antes de delegar</text>
-<rect x="45" y="210" width="260" height="125" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
-<text x="175.0" y="247" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Administración</text>
-<text x="175.0" y="284" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Personal y configuración</text>
-<rect x="345" y="210" width="260" height="125" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
-<text x="475.0" y="247" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Catálogo y carta</text>
-<text x="475.0" y="284" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Precio y disponibilidad</text>
-<rect x="645" y="210" width="260" height="125" rx="5" fill="#082d50" stroke="#a9bdcf" stroke-width="1.5"/>
-<text x="775.0" y="247" font-family="Arial, sans-serif" font-size="23" fill="white" font-weight="700" text-anchor="middle">Pedidos y cocina</text>
-<text x="775.0" y="284" font-family="Arial, sans-serif" font-size="20" fill="white" font-weight="400" text-anchor="middle">Confirmación y estados</text>
-<rect x="945" y="210" width="260" height="125" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
-<text x="1075.0" y="247" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Inventario</text>
-<text x="1075.0" y="284" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Reserva y movimientos</text>
-<rect x="45" y="445" width="260" height="125" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
-<text x="175.0" y="482" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Plataforma SaaS</text>
-<text x="175.0" y="519" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Negocios y soporte</text>
-<rect x="345" y="445" width="260" height="125" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
-<text x="475.0" y="482" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Reportes</text>
-<text x="475.0" y="519" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Consultas autorizadas</text>
-<rect x="645" y="445" width="260" height="125" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
-<text x="775.0" y="482" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Caja y ventas</text>
-<text x="775.0" y="519" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Cobros y turnos</text>
-<rect x="945" y="445" width="260" height="125" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
-<text x="1075.0" y="482" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Fidelidad</text>
-<text x="1075.0" y="519" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Beneficios por empresa</text>
-<polyline points="645,273 605,273" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
-<polyline points="905,273 945,273" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
-<polyline points="775,445 775,335" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
-<polyline points="905,508 945,508" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
-<polyline points="605,508 645,508" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
-<polyline points="305,273 345,273" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
-<polyline points="175,445 175,335" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
-<text x="36" y="690" font-family="Arial, sans-serif" font-size="21" fill="#52697d" font-weight="400" text-anchor="start">Pedidos valida catálogo e inventario. Caja cobra después. Los eventos se emiten tras confirmar.</text>
+<rect x="245" y="108" width="790" height="56" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="640" y="144" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Aplicación web · Next.js / React</text>
+<rect x="25" y="212" width="1230" height="510" rx="6" fill="none" stroke="#a9bdcf" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="40" y="243" font-family="Arial, sans-serif" font-size="24" fill="#082d50" font-weight="700" text-anchor="start">API Venddy · un solo despliegue</text>
+<rect x="45" y="258" width="560" height="74" rx="5" fill="white" stroke="#196bdb" stroke-width="1.5"/>
+<text x="325" y="287" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">API REST</text>
+<text x="325" y="317" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Negocio, sesión, permisos y validación antes de delegar</text>
+<rect x="645" y="258" width="560" height="74" rx="5" fill="white" stroke="#008f86" stroke-width="1.5"/>
+<text x="925" y="287" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Eventos Socket.IO</text>
+<text x="925" y="317" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Salas por negocio y estación; avisos tras confirmar</text>
+<rect x="35" y="372" width="1180" height="328" rx="6" fill="none" stroke="#a9bdcf" stroke-width="1.5" stroke-dasharray="4 4"/>
+<text x="50" y="397" font-family="Arial, sans-serif" font-size="19" fill="#52697d" font-weight="400" text-anchor="start">Módulos de negocio</text>
+<rect x="45" y="408" width="260" height="104" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="175.0" y="449" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Administración</text>
+<text x="175.0" y="481" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Personal y configuración</text>
+<rect x="345" y="408" width="260" height="104" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="475.0" y="449" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Catálogo y carta</text>
+<text x="475.0" y="481" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Precio y disponibilidad</text>
+<rect x="645" y="408" width="260" height="104" rx="5" fill="#082d50" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="775.0" y="449" font-family="Arial, sans-serif" font-size="23" fill="white" font-weight="700" text-anchor="middle">Pedidos y cocina</text>
+<text x="775.0" y="481" font-family="Arial, sans-serif" font-size="20" fill="white" font-weight="400" text-anchor="middle">Confirmación y estados</text>
+<rect x="945" y="408" width="260" height="104" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="1075.0" y="449" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Inventario</text>
+<text x="1075.0" y="481" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Reserva y movimientos</text>
+<rect x="45" y="576" width="260" height="104" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="175.0" y="617" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Plataforma SaaS</text>
+<text x="175.0" y="649" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Negocios y soporte</text>
+<rect x="345" y="576" width="260" height="104" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="475.0" y="617" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Reportes</text>
+<text x="475.0" y="649" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Consultas autorizadas</text>
+<rect x="645" y="576" width="260" height="104" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="775.0" y="617" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Caja y ventas</text>
+<text x="775.0" y="649" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Cobros y turnos</text>
+<rect x="945" y="576" width="260" height="104" rx="5" fill="#edf5fc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="1075.0" y="617" font-family="Arial, sans-serif" font-size="23" fill="#082d50" font-weight="700" text-anchor="middle">Fidelidad</text>
+<text x="1075.0" y="649" font-family="Arial, sans-serif" font-size="20" fill="#082d50" font-weight="400" text-anchor="middle">Beneficios por empresa</text>
+<rect x="70" y="776" width="340" height="72" rx="5" fill="#f7fafc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="240" y="807" font-family="Arial, sans-serif" font-size="22" fill="#082d50" font-weight="700" text-anchor="middle">PostgreSQL (Neon)</text>
+<text x="240" y="834" font-family="Arial, sans-serif" font-size="19" fill="#52697d" font-weight="400" text-anchor="middle">Cada módulo, solo sus tablas</text>
+<rect x="470" y="776" width="340" height="72" rx="5" fill="#f7fafc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="640" y="807" font-family="Arial, sans-serif" font-size="22" fill="#082d50" font-weight="700" text-anchor="middle">Fotos y archivos</text>
+<text x="640" y="834" font-family="Arial, sans-serif" font-size="19" fill="#52697d" font-weight="400" text-anchor="middle">R2 objetivo</text>
+<rect x="870" y="776" width="340" height="72" rx="5" fill="#f7fafc" stroke="#a9bdcf" stroke-width="1.5"/>
+<text x="1040" y="807" font-family="Arial, sans-serif" font-size="22" fill="#082d50" font-weight="700" text-anchor="middle">Google Identity</text>
+<text x="1040" y="834" font-family="Arial, sans-serif" font-size="19" fill="#52697d" font-weight="400" text-anchor="middle">Fidelidad opcional</text>
+<polyline points="500,164 500,258" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<text x="512" y="194" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">HTTPS / REST</text>
+<polyline points="925,258 925,164" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
+<text x="937" y="194" font-family="Arial, sans-serif" font-size="20" fill="#52697d" font-weight="400" text-anchor="start">WSS / eventos</text>
+<polyline points="325,332 325,372" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<text x="337" y="358" font-family="Arial, sans-serif" font-size="19" fill="#52697d" font-weight="400" text-anchor="start">invoca casos de uso</text>
+<polyline points="775,408 775,332" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
+<text x="787" y="358" font-family="Arial, sans-serif" font-size="19" fill="#52697d" font-weight="400" text-anchor="start">avisa tras confirmar</text>
+<polyline points="645,460 605,460" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
+<polyline points="905,460 945,460" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
+<polyline points="775,576 775,512" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
+<polyline points="905,628 945,628" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
+<polyline points="605,628 645,628" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
+<polyline points="305,460 345,460" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
+<polyline points="175,576 175,512" fill="none" stroke="#008f86" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#green)"/>
+<polyline points="240,700 240,776" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<text x="252" y="754" font-family="Arial, sans-serif" font-size="19" fill="#52697d" font-weight="400" text-anchor="start">SQL con Prisma</text>
+<polyline points="640,700 640,776" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<text x="652" y="754" font-family="Arial, sans-serif" font-size="19" fill="#52697d" font-weight="400" text-anchor="start">HTTPS</text>
+<polyline points="1040,700 1040,776" fill="none" stroke="#196bdb" stroke-width="2.3" stroke-dasharray="0" marker-end="url(#arrow)"/>
+<text x="1052" y="754" font-family="Arial, sans-serif" font-size="19" fill="#52697d" font-weight="400" text-anchor="start">HTTPS</text>
+<text x="36" y="890" font-family="Arial, sans-serif" font-size="21" fill="#52697d" font-weight="400" text-anchor="start">Pedidos valida catálogo e inventario. Caja cobra después. Los eventos se emiten tras confirmar.</text>
 </svg>

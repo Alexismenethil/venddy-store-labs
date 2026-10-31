@@ -14,3 +14,5 @@
 | HU10 | Administrador | Analizar ventas y caja. | RF-10 |
 | HU11 | Plataforma | Gestionar el servicio y su soporte. | RF-11 |
 | HU12 | Cliente de fidelidad | Participar en beneficios de su negocio. | RF-12 |
+| HU13 | Comensal | Saber en qué estado está mi pedido. | RF-13 |
+| HU14 | Caja | Anular un pedido sin descuadrar stock ni caja. | RF-14 |

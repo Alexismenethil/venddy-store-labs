@@ -1,16 +1,17 @@
-# Revisiones de atributos de calidad
+# Atributos de calidad
 
-| ID | Atributo | Revisión | Evidencia exigida | Estado y límite |
-|---|---|---|---|---|
-| AC01 | Seguridad y aislamiento | Intentar leer, escribir o recibir datos de otro negocio. | Sin accesos cruzados; validar contexto, permisos, RLS y salas. | Pruebas integrales pendientes; núcleo en memoria verificable. |
-| AC02 | Autenticación y autorización | Revocar sesión o permiso y repetir una operación REST/evento. | Rechazo sin cambios; HTTPS y cookies protegidas. | Control descrito en informe; aceptación de entorno pendiente. |
-| AC03 | Integridad transaccional | Repetir pedidos, competir por stock y provocar fallos. | Una identidad/reserva; sin stock negativo ni cambios parciales. | Reglas demostrables en memoria; PostgreSQL requiere ensayo integral. |
-| AC04 | Rendimiento y capacidad | Ejecutar carga representativa de carta, pedidos, caja y reportes. | Registrar p95, errores, memoria y conexiones; sin divergencias ni reinicios. | Umbrales y capacidad por acordar/medir; sin número comercial garantizado. |
-| AC05 | Mantenibilidad | Cambiar un adaptador y revisar dependencias. | Dominio/Aplicación sin frameworks; pruebas del núcleo aprobadas. | Demostración académica; no acredita migración productiva. |
-| AC06 | Portabilidad | Ensayar frontend, sesiones y subdominios en el runtime objetivo. | Conservar SSR, identidad, cookies, imágenes y conexión de eventos. | Migración a Workers/OpenNext pendiente de validar. |
-| AC07 | Disponibilidad | Interrumpir y reiniciar la API; reconectar clientes. | Detectar caída y recuperar estado persistido; medir indisponibilidad. | Una API no ofrece continuidad ante su caída; sin réplica activa. |
-| AC08 | Recuperabilidad | Restaurar una copia de datos y archivos en entorno separado. | Verificar roles, RLS, pedidos y referencias a fotos; medir RPO/RTO. | Metas externas RPO 24 h y RTO 2 h, pendientes de ensayo. |
-| AC09 | Observabilidad | Provocar error, indisponibilidad y respaldo fallido. | Relacionar requestId/log/alerta sin filtrar tokens ni secretos. | Integración y alertas por verificar en el entorno objetivo. |
-| AC10 | Entrega verificable | Forzar fallo de comprobaciones y aplicar migración de prueba. | Bloquear publicación fallida y preservar roles, RLS y restricciones. | Compuerta de release y reversión por validar. |
+| ID | Atributo | Métrica y meta propuesta | Estado |
+|---|---|---|---|
+| AC01 | Seguridad y aislamiento | 0 accesos cruzados; 100 % de tablas de negocio con RLS forzado. | Por validar; núcleo en memoria probado. |
+| AC02 | Autenticación y autorización | 100 % de la [matriz de permisos](01-actores.md#permisos-por-actor) correcta; 0 operaciones aceptadas tras revocar. | Por validar. |
+| AC03 | Integridad transaccional | 0 duplicados en 1 000 reintentos; 0 stock negativo; 0 cambios parciales. | Medido en memoria; PostgreSQL por validar. |
+| AC04 | Rendimiento, capacidad y escalabilidad | p95: carta ≤ 500 ms, confirmar ≤ 1 s, llegada a cocina ≤ 2 s, reporte ≤ 3 s; errores < 1 %; LCP móvil ≤ 2,5 s; 2 veces el pico con 0,5 CPU y 512 MB. | Por validar. |
+| AC05 | Mantenibilidad | 0 dependencias prohibidas; 0 archivos del núcleo tocados al cambiar un adaptador; ningún archivo de más de 300 líneas; 0 rutas con acceso a la base. | Medido en el demo; backend por validar. |
+| AC06 | Portabilidad | 100 % de casos aprobados en el entorno objetivo: subdominio, sesión, identidad, imágenes y eventos. | Por validar. |
+| AC07 | Disponibilidad | ≥ 99,5 % mensual; recuperación ≤ 5 min; aviso perdido ≤ 30 s. | Por validar; una API no ofrece continuidad ante su caída. |
+| AC08 | Recuperabilidad | RPO ≤ 24 h; RTO ≤ 2 h; 100 % de verificaciones de roles, RLS, pedidos y fotos. | Por validar. |
+| AC09 | Observabilidad | 100 % de errores rastreables por requestId; 0 secretos en logs; alerta ≤ 5 min. | Por validar. |
+| AC10 | Entrega verificable | 0 publicaciones con una comprobación fallida; 0 políticas RLS perdidas. | Por validar. |
+| AC11 | Usabilidad y accesibilidad | ≥ 90 % pide sin ayuda; mediana ≤ 2 min; SUS ≥ 68; accesibilidad ≥ 90 en Lighthouse. | Por validar. |
 
-[Escenarios de seis partes](08-escenarios-atributos-calidad.md). Ningún objetivo equivale a una garantía de producción ni a un resultado de carga no ejecutado.
+[Escenarios y medición](08-escenarios-atributos-calidad.md). Ninguna meta equivale a un resultado: lo medido se registra en los escenarios.

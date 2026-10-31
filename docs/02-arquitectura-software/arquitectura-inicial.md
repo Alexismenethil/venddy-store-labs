@@ -17,7 +17,27 @@ La API conserva empresa y permisos en cada operación. Confirma el registro ante
 
 ## Datos y recuperación
 
-PostgreSQL atiende la operación. Las fotografías usan almacenamiento externo: Cloudinary en el informe del 02/10/2026 y R2 como objetivo de migración. Las copias deben conservarse en un espacio privado con permisos separados.
+| Módulo | Datos propios |
+|---|---|
+| Catálogo y carta | Categorías, productos, variantes, precios, fotos, mesas y tokens QR. |
+| Pedidos y cocina | Pedidos, líneas, claves de idempotencia, tickets por estación y estados. |
+| Inventario | Existencias por producto y topping; movimientos. |
+| Caja y ventas | Turnos, cobros, medios de pago, notas internas y cierres. |
+| Administración | Personal, permisos y configuración del negocio. |
+| Plataforma SaaS | Negocios, planes, suscripciones y visitas de soporte. |
+| Fidelidad | Programas, clientes y beneficios. |
+| Reportes | Sin tablas propias; consulta contratos de lectura. |
+
+| Operación atómica | Se confirma junto |
+|---|---|
+| Confirmar pedido | Pedido, líneas, clave, tickets, reserva de stock y movimiento. |
+| Cobrar | Cobro, medios de pago, nota interna, estado del pedido y beneficio. |
+| Anular pedido | Estado, devolución de stock y movimiento con motivo y autor. |
+| Ajustar stock | Existencia y movimiento. |
+
+Cada módulo escribe solo sus tablas; el caso de uso abre la transacción por una unidad de trabajo ([ADR-007](../01-analisis-de-sistema/07-decisiones-arquitectonicas.md)).
+
+PostgreSQL atiende la operación. Las fotografías usan almacenamiento de objetos; R2 es el objetivo. Las copias deben conservarse en un espacio privado con permisos separados.
 
 La base de recuperación propuesta permite restaurar y validar copias en un entorno aislado bajo demanda. No recibe tráfico comercial ni implica réplica activa o conmutación automática. Los objetivos RPO 24 h y RTO 2 h requieren ensayos de restauración.
 

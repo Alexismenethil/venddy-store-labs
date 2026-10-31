@@ -108,7 +108,7 @@
 <text x="470" y="1210" font-size="31" fill="#52697D" font-weight="400" text-anchor="middle">Pedidos, cobros y stock</text>
 <rect x="870" y="1120" width="660" height="120" rx="6" fill="#F7FAFC" stroke="#B9CBD9" stroke-width="2" />
 <text x="1200" y="1168" font-size="36" fill="#082D50" font-weight="700" text-anchor="middle">Fotos y archivos</text>
-<text x="1200" y="1210" font-size="31" fill="#52697D" font-weight="400" text-anchor="middle">Cloudinary / R2 objetivo</text>
+<text x="1200" y="1210" font-size="31" fill="#52697D" font-weight="400" text-anchor="middle">R2 objetivo</text>
 <rect x="1600" y="1120" width="660" height="120" rx="6" fill="#F7FAFC" stroke="#B9CBD9" stroke-width="2" />
 <text x="1930" y="1168" font-size="36" fill="#082D50" font-weight="700" text-anchor="middle">Google Identity</text>
 <text x="1930" y="1210" font-size="31" fill="#52697D" font-weight="400" text-anchor="middle">Fidelidad opcional</text>

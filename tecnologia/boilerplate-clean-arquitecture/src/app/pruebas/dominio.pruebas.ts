@@ -141,8 +141,8 @@ async function main(): Promise<void> {
   });
   await prueba('repetir un intento devuelve el mismo pedido y consume stock una sola vez', async () => {
     const e = entorno(); const entrada = comando(Carrito.vacio('N1').agregar(producto(), 2));
-    const [a, b] = await Promise.all([e.casoUso.ejecutar(entrada), e.casoUso.ejecutar(entrada)]);
-    assert.equal(a.pedido.id, b.pedido.id);
+    const resultados = await Promise.all(Array.from({ length: 1000 }, () => e.casoUso.ejecutar(entrada)));
+    assert.equal(new Set(resultados.map((r) => r.pedido.id)).size, 1);
     assert.equal((await e.productos.buscarPorId('N1', 'P1'))!.stockDisponible, 8);
     assert.equal((await e.pedidos.listarPorCliente('N1', 'C1')).length, 1); assert.equal(e.avisador.pedidos.size, 1);
   });
@@ -193,9 +193,9 @@ async function main(): Promise<void> {
         if (entrada.isDirectory()) verificar(ruta);
         else if (ruta.endsWith('.ts')) {
           const fuente = readFileSync(ruta, 'utf8');
-          for (const coincidencia of fuente.matchAll(/from\s+['"]([^'"]+)['"]/g)) {
-            const destino = resolve(carpeta, coincidencia[1]);
-            assert(!relative(dominio, destino).startsWith('..'), `${ruta} importa ${coincidencia[1]} fuera del dominio`);
+          for (const coincidencia of fuente.matchAll(/\b(?:from|import|require)\s*\(?\s*['"]([^'"]+)['"]/g)) {
+            const modulo = coincidencia[1];
+            assert(modulo.startsWith('.') && !relative(dominio, resolve(carpeta, modulo)).startsWith('..'), `${ruta} importa ${modulo} fuera del dominio`);
           }
         }
       }
